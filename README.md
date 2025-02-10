@@ -18,4 +18,4 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/MeloyWW/SportKAMO2.git
-   cd название-репозитория
+   cd SportKAMO2
