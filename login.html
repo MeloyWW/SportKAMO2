@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Вход в систему</h2>
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Пароль:</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Роль:</label>
+            <div class="role-select">
+                <label><input type="radio" name="role" value="user" checked> Пользователь</label>
+                <label><input type="radio" name="role" value="admin"> Администратор</label>
+            </div>
+        </div>
+
+        <button type="submit">Войти</button>
+    </form>
+</div>
+{% endblock %}

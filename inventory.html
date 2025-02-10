@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Спортивный инвентарь{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Список инвентаря</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Тип</th>
+                <th>Количество</th>
+                <th>Состояние</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in inventory %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.type }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.condition }}</td>
+                <td>{{ item.price }} руб.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
